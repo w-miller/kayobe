@@ -181,6 +181,8 @@ overcloud_container_image_regex_map:
     enabled: "{{ kolla_enable_swift | bool }}"
   - regex: tgtd
     enabled: "{{ kolla_enable_cinder | bool or kolla_enable_ironic | bool }}"
+  - regex: zookeeper
+    enabled: "{{ kolla_enable_zookeeper | bool or kolla_enable_kafka | bool }}"
 
 # List of regular expressions matching names of container images to build for
 # overcloud hosts.
@@ -315,6 +317,7 @@ kolla_enable_osprofiler: "no"
 kolla_enable_sahara: "no"
 kolla_enable_skydive: "no"
 kolla_enable_swift: "no"
+kolla_enable_zookeeper: "no"
 
 ###############################################################################
 # Passwords and credentials.
