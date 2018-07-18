@@ -312,6 +312,9 @@ kolla_extra_murano:
 # Whether to enable Neutron.
 kolla_enable_neutron:
 
+# Whether to enable the Ironic Neutron agent.
+kolla_enable_ironic_neutron_agent:
+
 # List of Neutron ML2 mechanism drivers to use.
 kolla_neutron_ml2_mechanism_drivers: []
 
